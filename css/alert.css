@@ -1,0 +1,25 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0 10% 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background-image: url("../img/alrtbg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin-left: -20%;
+}
+
+.Pan {
+    margin-left: -20%;
+}
