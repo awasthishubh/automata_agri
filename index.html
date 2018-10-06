@@ -8,7 +8,7 @@
     <title>HOPE | Home</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./css/materialize.css">
     <link rel="stylesheet" href="css/loader.css">
 </head>
 
@@ -16,7 +16,7 @@
     <!-- Landing Section -->
     <section class="landing">
         <!-- Navigation -->
-        <nav>
+        <nav class="transparent z-depth-0" style="display:flex;    height: 100px;">
             <!-- Left -->
             <ul class="nav-left">
                 <li>
@@ -79,38 +79,52 @@
         <h2>
             PREDICT
         </h2>
-        <div id="select" style="padding:20px;display:;height: 500px">
-            <div style="width:500px; text-align: center; margin: auto">
+        <div class="row" id="select" style="display:nne;padding:20px;height: 500px">
+            <div class="col s12 m8 l6 offset-m2 offset-l3" style="text-align: center;">
                 <input id="search" type="text" placeholder="Search Box" style="    background: rgba(255,255,255,0.7);
                 height: 50px;
                 width: 100%;
                 font-size: 16px;
                 font-weight: bold;">
                 <div class="card-content" style="height:300px;" id="gm1"></div>
+            
+            <div class="input-field col s12">
+                    <select name="area" id="crop">
+                        <option value="0" selected disabled>Choose a crop</option>
+                        <option value="rice">Rice</option>
+                        <option value="bajra">Bajra</option>
+                        <option value="maize">Maize</option>
+                </select>
+                <!-- <label>Materialize Select</label> -->
             </div>
-            <select name="area" id="crop">
-                <option value="0" selected disabled>Choose a crop</option>
-                <option value="rice">Rice</option>
-                <option value="bajra">Bajra</option>
-                <option value="maize">Maize</option>
-            </select><br>
-            <button onclick="submit()">Submit</button>
+            <button class="home-button" style="color:white" onclick="submit()">Submit</button>
         </div>
-        <div id="loader" style="display: none; height: 500px;width: 400px;background-color: white; padding: 20px; ">
-            <div class="lds-css ng-scope" style="width: 200px;height: 200px;position: relative;top: 50%;left: 50%;
-            margin-top: -200px;
-            margin-left: 100px;">
-                <div class="lds-rolling">
-                    <div></div>
+        </div>
+        <div class="row">
+            <div id="loader" class="col s12 m8 l6 offset-m2 offset-l3" style="display: none; height: 500px;background-color: white; padding: 20px; ">
+                <div class="lds-css ng-scope" style="width: 200px;height: 200px;position: relative;top: 10%;left: 50%;
+                margin-left: -100px;">
+                    <div class="lds-rolling">
+                        <div></div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="result" style="height: 500px;width: 400px; display: none;">
-            Total Yield <span id="totalyield">123</span> kg/hectre
-            <div id="lowYield" style="display:none">Low</div>
-            <div id="normalYield" style="display:none">Normal</div>
-            <div id="highYield" style="display:none">High</div>
-            <button onclick="back()">Submit</button>
+        <div id="result" class="row" style="height: 500px; display: none;">
+            <div class="col s12 m8 l6 offset-m2 offset-l3">
+                <div id="card-color" class="green" style="display:flow-root;padding: 20px">
+                    <h3 style="width:100%"><b>Total Yield</b> </h3>
+                    <div style="font-size:20px"><span style="width:100%" id="totalyield">123</span>kg/hectre    </div>
+                </div>
+                <div class="grey lighten-3" style="display:flow-root;padding: 60px 0px;">
+                    <div id="lowYield" class="red-text" style="display:none"><h3><b>Low Yield</b></h3></div>
+                    <div id="normalYield" class="green-text" style="display:none"><h3><b>Normal Yield</b></h3></div>
+                    <div id="highYield" class="red-text" style="display:none"><h3><b>High Yield</b></h3></div>
+                </div>
+                
+                
+                <button class="home-button" style="margin-top: 30px;color:white" onclick="back()">Back</button>
+            </div>
         </div>
         
         <!-- 
@@ -119,7 +133,7 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer style="display:flex">
         <p>
             Made with &#9825; by team Automata
         </p>
@@ -128,6 +142,7 @@
     <script src="js/MapSelect.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEUsLnKqhV-3DzONveudaxSylYewVReYU&libraries=places&callback=initAutocomplete"
     async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
     <script src="./js/defined.js"></script>
 </body>
 
