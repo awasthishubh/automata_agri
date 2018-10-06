@@ -8,6 +8,8 @@
     <title>HOPE | Home</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/loader.css">
 </head>
 
 <body>
@@ -77,6 +79,40 @@
         <h2>
             PREDICT
         </h2>
+        <div id="select" style="padding:20px;display:;height: 500px">
+            <div style="width:500px; text-align: center; margin: auto">
+                <input id="search" type="text" placeholder="Search Box" style="    background: rgba(255,255,255,0.7);
+                height: 50px;
+                width: 100%;
+                font-size: 16px;
+                font-weight: bold;">
+                <div class="card-content" style="height:300px;" id="gm1"></div>
+            </div>
+            <select name="area" id="crop">
+                <option value="0" selected disabled>Choose a crop</option>
+                <option value="rice">Rice</option>
+                <option value="bajra">Bajra</option>
+                <option value="maize">Maize</option>
+            </select><br>
+            <button onclick="submit()">Submit</button>
+        </div>
+        <div id="loader" style="display: none; height: 500px;width: 400px;background-color: white; padding: 20px; ">
+            <div class="lds-css ng-scope" style="width: 200px;height: 200px;position: relative;top: 50%;left: 50%;
+            margin-top: -200px;
+            margin-left: 100px;">
+                <div class="lds-rolling">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div id="result" style="height: 500px;width: 400px; display: none;">
+            Total Yield <div id="totalyield">123</div>k/hectre
+            <div id="lowYield">Low</div>
+            <div id="normalYield">Normal</div>
+            <div id="highYield">High</div>
+            <button onclick="back()">Submit</button>
+        </div>
+        
         <!-- 
             ADD HERE-----------------------------------------------------
          -->
@@ -88,6 +124,11 @@
             Made with &#9825; by team Automata
         </p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/MapSelect.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEUsLnKqhV-3DzONveudaxSylYewVReYU&libraries=places&callback=initAutocomplete"
+    async defer></script>
+    <script src="./js/defined.js"></script>
 </body>
 
 </html>
