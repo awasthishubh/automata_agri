@@ -7,32 +7,48 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HOPE | Home</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/materialize.css">
     <link rel="stylesheet" href="css/loader.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <!-- Landing Section -->
-    <section class="landing">
+    <section class="landing" id="home">
         <!-- Navigation -->
-        <nav class="transparent z-depth-0" style="display:flex;    height: 100px;">
+        <div class="navbar-fixed" style="height: 100px;">
+        <nav id="staticNav" class="transparent z-depth-0" style="display: flex;
+        height: 75px;
+        position: fixed;
+        top: 0px;">
             <!-- Left -->
+            <div class="nav-left show-on-small hide-on-med-and-up">
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="large material-icons">menu</i></a>
+            </div>
+            <a href="#" onclick="scroll2('home')" style="margin-top: -10px;">
             <ul class="nav-left">
-                <li>
+                 <li>
                     <img src="img/logo.png" alt="logo">
                 </li>
-                <li class="logo-text">HOPE</li>
-            </ul>
+                <li class="logo-text" style="margin-top: -14px;">HOPE</li>
+            </ul></a>
 
             <!-- Right -->
-            <ul class="nav-right">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Predict</a></li>
-                <li><a href="alert.html" target="blank">Alerts</a></li>
-                <li><a href="#">Admin</a></li>
+            <ul class="nav-right hide-on-small-only">
+                <li style="margin-top: -14px;"><a onclick="scroll2('about')" href="#">About</a></li>
+                <li style="margin-top: -14px;"><a onclick="scroll2('predict')" href="#">Predict</a></li>
+                <li style="margin-top: -14px;"><a href="alert.html" target="blank">Alerts</a></li>
+                <li style="margin-top: -14px;"><a href="#">Admin</a></li>
             </ul>
         </nav>
+        </div>
+        <ul id="slide-out" class="sidenav" style="padding-top:50px">
+                <li><a onclick="scroll2('about')" href="#">About</a></li>
+                <li><a onclick="scroll2('predict')" href="#">Predict</a></li>
+                <li><a href="alert.html" target="blank">Alerts</a></li>
+                <li><a href="#">Admin</a></li>
+              </ul>
         <div>
             <p>
                 Predict the right time to store <br> your crops & make <strong>Maximum Profits!</strong>
@@ -43,7 +59,7 @@
 
     <!-- About us -->
     <section class="section-margin section-ht-center1">
-        <div>
+        <div id="about">
             <h2>
                 ABOUT
             </h2>
@@ -75,7 +91,7 @@
     </section>
 
     <!-- Predict -->
-    <section>
+    <section id="predict">
         <h2>
             PREDICT
         </h2>

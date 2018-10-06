@@ -1,18 +1,39 @@
 $(document).ready(function(){
     $('select').formSelect();
+    $('.sidenav').sidenav();
   });
 function back(){
     console.log('back')
     $('#result').fadeOut()
     $('#select').fadeIn()
 }
+$(window).scroll(function() {
+    if($(this).scrollTop()>300 && $("#staticNav").hasClass("transparent")){
+        $("#staticNav").removeClass('z-depth-0')
+        $("#staticNav").removeClass('transparent')
+        $("#staticNav").addClass('pplr')
+        $("#staticNav").addClass('z-depth-2')
+    }
+    else if($(this).scrollTop()<300 && $("#staticNav").hasClass("pplr")){
+        $("#staticNav").addClass('z-depth-0')
+        $("#staticNav").addClass('transparent')
+        $("#staticNav").removeClass('pplr')
+        $("#staticNav").removeClass('z-depth-2')
+    }
+ });
+function scroll2(id){
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#"+id).offset().top-100
+    }, 800);
+}
+
 function submit(){
     if(!$('#crop').val()) return
     console.log(marker1.getPosition().lat())
     console.log(marker1.getPosition().lng())
     console.log($('#crop').val())
     $.ajax({
-        url:'http://localhost:5000/?lat='+marker1.getPosition().lat()+'&lng='+marker1.getPosition().lng()+'&crop='+$('#crop').val(),
+        url:'https://automata-agri.herokuapp.com/?lat='+marker1.getPosition().lat()+'&lng='+marker1.getPosition().lng()+'&crop='+$('#crop').val(),
         beforeSend: function(){
             $('#select').fadeOut()
             $('#loader').fadeIn()
