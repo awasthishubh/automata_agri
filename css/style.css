@@ -53,12 +53,12 @@ nav ul li img {
 }
 
 nav ul li a {
-    font-size: 1.1rem;
+    font-size: 20px;
 }
 
 .logo-text {
     /* font-size: 40px; */
-    font-size: 2.1rem;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
@@ -101,8 +101,7 @@ nav ul li a {
 .home-button {
     color: white;
     font-family: 'Poppins', sans-serif;
-    /* font-size: 24px; */
-    font-size: 1.2rem;
+    font-size: 24px;
     font-weight: bold;
     background-color: #681DFF;
     margin-top: 1%;
@@ -142,7 +141,6 @@ footer {
     background-color: rgb(34, 34, 34);
     color: #79FF98;
 }
-
 
 /*theme color back*/
 .pplr {
