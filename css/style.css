@@ -150,3 +150,7 @@ footer {
         margin: auto !important
     }
 }
+
+.btnc {
+    background-image: linear-gradient(to right, #88f69a, #3a48ea) !important;
+}

@@ -45,7 +45,7 @@ function submit(){
         }
     }).done(function(data){
         console.log(data)
-        $('#totalyield').html(data.yield)
+        $('#totalyield').html(data.yield.toFixed(2))
         if(data.type==0){
             $('#lowYield').show()
             $('#card-color').addClass('red')
