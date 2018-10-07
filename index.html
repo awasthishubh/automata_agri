@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/materialize.css">
     <link rel="stylesheet" href="css/loader.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/sal.js/dist/sal.css ">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -22,18 +23,18 @@
         height: 100px;
         position: fixed;
         top: 0px;">
-            <!-- Left -->
-            <div class="show-on-small hide-on-med-and-up" style="    position: absolute;            left: 0px;">
-                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="large material-icons">menu</i></a>
-            </div>
-            <!-- <a href="#" onclick="scroll2('home')" style="margin-top: -10px;"> -->
-            <ul class="nav-left">
-                 <li>
-                    <img src="img/logo.png" alt="logo">
-                </li>
-                <li class="logo-text" style="margin-top: -14px;">HOPE</li>
-            </ul>
-        <!-- </a> -->
+                <!-- Left -->
+                <div class="show-on-small hide-on-med-and-up" style="    position: absolute;            left: 0px;">
+                    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="large material-icons">menu</i></a>
+                </div>
+                <!-- <a href="#" onclick="scroll2('home')" style="margin-top: -10px;"> -->
+                <ul class="nav-left">
+                    <li>
+                        <img src="img/logo.png" alt="logo">
+                    </li>
+                    <li class="logo-text" style="margin-top: -14px;">HOPE</li>
+                </ul>
+                <!-- </a> -->
                 <!-- Right -->
                 <ul class="nav-right hide-on-small-only">
                     <li style="margin-top: -14px;"><a onclick="scroll2('about')" href="#">About</a></li>
@@ -49,22 +50,23 @@
             <li><a href="alert.html" target="blank">Alerts</a></li>
             <li><a href="#">Admin</a></li>
         </ul>
-        <div>
+        <div data-sal-duration="1200" data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease-out-bounce">
             <p>
                 Predict the right time to store <br> your crops & make <strong>Maximum Profits!</strong>
             </p>
-            <a class="home-button" href="#">GET STARTED</a>
+            <a class="home-button" id="btn" href="#" onclick="scroll2('predict')">GET STARTED</a>
+            <!-- <button class="home-button" id="btn">GET STARTED</button> -->
         </div>
     </section>
-
     <!-- About us -->
     <section class="section-margin section-ht-center1">
         <div id="about">
-            <h2>
+            <h2 data-sal-duration="1200" data-sal="fade" data-sal-delay="1100" data-sal-easing="ease-out-bounce">
                 ABOUT
             </h2>
 
-            <p align="justify" class="text">
+            <p align="justify" class="text" data-sal-duration="1200" data-sal="fade" data-sal-delay="1050"
+                data-sal-easing="ease-out-bounce">
                 It has been quite often observed that there has been a bumper crop in a particular region at a
                 particular
                 time due to which the price of the crop falls heavily.There have been innumerable such scenarios where
@@ -91,11 +93,12 @@
     </section>
 
     <!-- Predict -->
-    <section id="predict">
-        <h2>
+    <section id="predict" class="target">
+        <h2 data-sal-duration="1200" data-sal="fade" data-sal-delay="1100" data-sal-easing="ease-out-bounce">
             PREDICT
         </h2>
-        <div class="row" id="select" style="display:nne;padding:20px;height: 500px;">
+        <div class="row" id="select" style="display:nne;padding:20px;height: 500px;" data-sal-duration="1200" data-sal="fade"
+            data-sal-delay="1100" data-sal-easing="ease-out-bounce">
             <div class="col s12 m8 l6 offset-m2 offset-l3" style="text-align: center;">
                 <input id="search" type="text" placeholder="Search Box" style="    background: rgba(255,255,255,0.7);
                 height: 50px;
@@ -156,12 +159,24 @@
             Made with &#9825; by team Automata
         </p>
     </footer>
+    <script src="./node_modules/sal.js/dist/sal.js"></script>
+    <script>
+        sal();
+    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/MapSelect.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEUsLnKqhV-3DzONveudaxSylYewVReYU&libraries=places&callback=initAutocomplete"
         async defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
     <script src="./js/defined.js"></script>
+    <!-- <script>
+        import jump from "./node_modules/jump.js/dist/jump.module.js";
+        var button = document.getElementById('btn');
+        button.addEventListener('click', () => {
+            jump(".target");
+        })
+    </script> -->
 </body>
 
 </html>
