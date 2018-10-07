@@ -9,12 +9,12 @@ function back() {
     $('#select').fadeIn()
 }
 $(window).scroll(function () {
-    if ($(this).scrollTop() > 300 && $("#staticNav").hasClass("transparent")) {
+    if ($(this).scrollTop() > 200 && $("#staticNav").hasClass("transparent")) {
         $("#staticNav").removeClass('z-depth-0')
         $("#staticNav").removeClass('transparent')
         $("#staticNav").addClass('pplr')
         $("#staticNav").addClass('z-depth-2')
-    } else if ($(this).scrollTop() < 300 && $("#staticNav").hasClass("pplr")) {
+    } else if ($(this).scrollTop() < 200 && $("#staticNav").hasClass("pplr")) {
         $("#staticNav").addClass('z-depth-0')
         $("#staticNav").addClass('transparent')
         $("#staticNav").removeClass('pplr')
