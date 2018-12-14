@@ -20,26 +20,28 @@
         <!-- Navigation -->
         <div class="navbar-fixed" style="height: 100px;">
             <nav id="staticNav" class="transparent z-depth-0" style="display: flex;
-        height: 100px;
+        /*height: 100px;*/
         position: fixed;
-        top: 0px;">
+        top: 0px;
+        padding-top: 16px;
+        height: 64px;">
                 <!-- Left -->
-                <div class="show-on-small hide-on-med-and-up" style="    position: absolute;            left: 0px;">
+                <div class="show-on-small hide-on-med-and-up" style="    position: absolute;   top: 4px;         left: 0px;">
                     <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="large material-icons">menu</i></a>
                 </div>
                 <!-- <a href="#" onclick="scroll2('home')" style="margin-top: -10px;"> -->
-                <ul class="nav-left">
+                <ul class="nav-left" style="    height: 56px;">
                     <li>
-                        <img src="img/logo.png" alt="logo">
+                        <img style="height: 50px;" src="img/logo.png" alt="logo">
                     </li>
                     <li class="logo-text" style="margin-top: -14px;">HOPE</li>
                 </ul>
                 <!-- </a> -->
                 <!-- Right -->
                 <ul class="nav-right hide-on-small-only">
-                    <li style="margin-top: -14px;"><a onclick="scroll2('about')" href="#">About</a></li>
-                    <li style="margin-top: -14px;"><a onclick="scroll2('predict')" href="#">Predict</a></li>
-                    <li style="margin-top: -14px;"><a href="alert.html" target="blank">Alerts</a></li>
+                    <li style="margin-top: -5px;"><a onclick="scroll2('about')" href="#">About</a></li>
+                    <li style="margin-top: -5px;"><a onclick="scroll2('predict')" href="#">Predict</a></li>
+                    <li style="margin-top: -5px;"><a href="alert.html" target="blank">Alerts</a></li>
                     <!-- <li style="margin-top: -14px;"><a href="#">Admin</a></li> -->
                 </ul>
             </nav>
@@ -157,7 +159,7 @@
     <!-- Footer -->
     <footer style="display:flex">
         <p>
-            Made with &#9825; by team Automata
+            Made with &#9825; by team TORQ
         </p>
     </footer>
     <script src="./node_modules/sal.js/dist/sal.js"></script>
@@ -167,7 +169,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/MapSelect.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEUsLnKqhV-3DzONveudaxSylYewVReYU&libraries=places&callback=initAutocomplete"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABx6VUqSYfuf7K0DuVlNhipkth1t6fTcA&libraries=places&callback=initAutocomplete"
         async defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
     <script src="./js/defined.js"></script>
